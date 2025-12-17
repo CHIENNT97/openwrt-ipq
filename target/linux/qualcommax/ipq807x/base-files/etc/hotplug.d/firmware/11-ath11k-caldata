@@ -119,6 +119,13 @@ case "$FIRMWARE" in
 		ath11k_patch_mac $(macaddr_add $label_mac -2) 1
 		ath11k_set_macflag
 		;;
+	tcl,hh500v)
+		caldata_extract "0:ART" 0x1000 0x20000
+		ath11k_patch_mac $(mtd_get_mac_binary "0:ART" 0x5e29c) 0
+		ath11k_patch_mac $(mtd_get_mac_binary "0:ART" 0x5e2a2) 1
+		ath11k_set_macflag
+		ath11k_remove_regdomain
+		;;
 	tplink,eap620hd-v1|\
 	tplink,eap660hd-v1)
 		caldata_from_file "/tmp/factory_data/radio" 0 0x20000

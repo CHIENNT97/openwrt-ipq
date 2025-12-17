@@ -45,6 +45,10 @@ redmi,ax6)
 tcl,linkhub-hh500v)
 	ucidef_set_led_wlan "wlan5g" "WiFi 5GHz" "blue:wlan" "phy0radio"
 	;;
+tcl,hh500v)
+	ucidef_set_led_netdev "wlan2g" "WiFi 2.4GHz" "blue:wlan" "phy0ap1"
+	ucidef_set_led_netdev "5G" "5G" "blue:5g" "rmnet_mhi0"
+	;;
 xiaomi,ax3600)
 	ucidef_set_led_netdev "wan-port-link" "WAN-PORT-LINK" "90000.mdio-1:01:green:wan" "wan" "tx rx link_10 link_100 link_1000"
 	ucidef_set_led_netdev "lan1-port-link" "LAN1-PORT-LINK" "90000.mdio-1:02:green:lan" "lan1" "tx rx link_10 link_100 link_1000"

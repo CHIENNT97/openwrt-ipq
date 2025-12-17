@@ -276,6 +276,10 @@ platform_do_upgrade() {
 	tplink,eap660hd-v1)
 		tplink_do_upgrade "$1"
 		;;
+	tcl,hh500v)
+		tcl_upgrade_prepare
+		nand_do_upgrade "$1"
+		;;
 	yuncore,ax880)
 		active="$(fw_printenv -n active)"
 		if [ "$active" -eq "1" ]; then
