@@ -124,6 +124,21 @@ define Device/jdcloud_re-ss-01
 endef
 TARGET_DEVICES += jdcloud_re-ss-01
 
+define Device/smwave_srs821
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := SMWave
+	DEVICE_MODEL := SRS821
+	SOC := ipq6000
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	DEVICE_DTS_CONFIG := config@cp01-c1
+	DEVICE_PACKAGES := ipq-wifi-jdcloud_re-ss-01
+	IMAGES += factory.bin
+	IMAGE/factory.bin := append-ubi | append-gl-metadata
+endef
+TARGET_DEVICES += smwave_srs821
+
 define Device/link_nn6000-v1
 	$(call Device/FitImage)
 	$(call Device/EmmcImage)

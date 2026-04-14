@@ -156,6 +156,7 @@ platform_do_upgrade() {
 		;;
 	glinet,gl-ax1800|\
 	glinet,gl-axt1800|\
+	smwave,srs821|\
 	netgear,rbr350|\
 	netgear,rbs350|\
 	netgear,wax214)

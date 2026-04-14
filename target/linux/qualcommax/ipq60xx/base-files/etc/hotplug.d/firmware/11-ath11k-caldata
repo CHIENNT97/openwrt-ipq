@@ -21,6 +21,7 @@ case "$FIRMWARE" in
 		;;
 	cambiumnetworks,xe3-4)
 		caldata_extract "0:ART" 0x1000 0x10000
+		ath11k_remove_regdomain
 		;;
 	glinet,gl-ax1800|\
 	glinet,gl-axt1800)
@@ -29,6 +30,9 @@ case "$FIRMWARE" in
 		ath11k_patch_mac $(macaddr_add $label_mac 3) 0
 		ath11k_patch_mac $(macaddr_add $label_mac 2) 1
 		ath11k_set_macflag
+		;;
+	smwave,srs821)
+		caldata_extract "0:art" 0x1000 0x10000
 		;;
 	jdcloud,re-cs-02|\
 	jdcloud,re-ss-01)
