@@ -186,7 +186,7 @@ define Device/swaiot_s10sky
 	PAGESIZE := 2048
 	DEVICE_DTS_CONFIG := config@ac02
 	SOC := ipq8071
-	DEVICE_PACKAGES := ipq-wifi-edgecore_eap102
+	DEVICE_PACKAGES := ipq-wifi-swaiot_s10sky
 endef
 TARGET_DEVICES += swaiot_s10sky
 

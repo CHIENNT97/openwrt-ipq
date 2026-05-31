@@ -386,5 +386,5 @@
 &wifi {
 	status = "okay";
 
-	qcom,ath11k-calibration-variant = "Edgecore-EAP102";
+	qcom,ath11k-calibration-variant = "Swaiot";
 };
